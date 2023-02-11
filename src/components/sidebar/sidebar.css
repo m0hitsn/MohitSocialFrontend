@@ -1,0 +1,148 @@
+.sidebar {
+  flex: 3;
+  height: calc(100vh - 50px);
+  overflow: scroll;
+  position: sticky;
+  top: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 179, 179);
+}
+
+.sidebarWrapper {
+  padding: 20px;
+}
+
+.sidebarList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebarListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebarIcon {
+  margin-right: 15px;
+}
+
+.sidebarButton {
+  width: 136px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.sidebarHr {
+  margin: 20px 0;
+}
+
+.sidebarFriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebarFriendListHeading {
+  color: #0B5FCC;
+  font-weight: 500;
+  font-size: 2vw;
+  margin-bottom: 31px;
+  text-align: center;
+
+}
+
+.sidebarFriend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+
+.sidebarFriendImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.sidebarFriendsFollowbtn {
+  margin-left: 12px;
+  background-color: #1877f2;
+  color: white;
+  margin-bottom: 4px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 7px 13px;
+  cursor: pointer;
+}
+
+.sidebarFriendTop {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarFriendBottom {
+  margin-right: 10px;
+}
+
+.sidebarFriendName {
+  width: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media screen and (max-width:840px) {
+  .sidebarListItem {
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+  }
+
+  .sidebarButton {
+    width: auto;
+  }
+
+  .sidebarFriendBottom {
+    margin: 14px 0px;
+  }
+
+  .sidebarFriend {
+    flex-wrap: wrap;
+  }
+
+}
+
+@media screen and (max-width:995px) {
+
+  .sidebar {
+    height: calc(100vh - 50px);
+    overflow: scroll;
+    position: fixed;
+    top: 50px;
+    z-index: 4;
+    width: 23%;
+    background-color: white;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+
+  }
+
+}

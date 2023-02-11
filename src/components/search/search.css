@@ -1,0 +1,23 @@
+.searchfriendBarWrapper {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+}
+.searchfriendBarWrapper:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+.searchfriendImg {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.searchfriendName{
+    color: black;
+}
+
+.FoundFriend {
+    padding-top: 33px;
+}
