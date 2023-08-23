@@ -24,7 +24,7 @@ export const Alluser = ({ user, currentUser, dispatch }) => {
         <div className="sidebarFriend">
             <Link to={`/profile/${user.username}`} style={{ textDecoration: "none", color: "black" }} >
                 <div className='sidebarFriendTop'>
-                    <img src={user?.ProfilePicture ? PF + "person/" + user?.ProfilePicture : PF + "person/BlankProfilePicture.jpg"} alt="" className="sidebarFriendImg"></img>
+                    <img src={user.ProfilePicture ? PF + "person/" + user.ProfilePicture : PF + "person/BlankProfilePicture.jpg"} alt="" className="sidebarFriendImg"></img>
                     <span className="sidebarFriendName">{user?.username}</span>
                 </div>
             </Link>

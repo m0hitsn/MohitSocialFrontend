@@ -28,7 +28,7 @@ const Messenger = () => {
     const socket = useRef();
 
     useEffect(() => {
-        socket.current = io("wss://mohitsocialsocketio.onrender.com/")
+        socket.current = io("wss://mohitsocialserver.onrender.com")
         socket.current.on("getMessage", data => {
             setArrivalMessage({
                 sender: data.senderId,

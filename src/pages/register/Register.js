@@ -1,14 +1,13 @@
-import React, { useRef, useContext } from 'react'
+import React, { useRef } from 'react'
 import "./Register.css";
 import { Link, Navigate } from "react-router-dom";
-import { AuthContext } from '../../context/AuthContext';
 import axios from "axios";
-import logincall from "../../Apicalls";
+import { useNavigate } from "react-router-dom";
 
 
 const Register = () => {
+    const navigate = useNavigate();;
     const baseurl = process.env.REACT_APP_BASE_URL;
-    let { dispatch } = useContext(AuthContext);
     const username = useRef();
     const email = useRef();
     const password = useRef();
@@ -25,13 +24,12 @@ const Register = () => {
             }
             try {
                 await axios.post(baseurl + "/auth/register", user);
-                <Navigate to="/" />
-                logincall({ email: email.current.value, password: password.current.value }, dispatch);
             } catch (error) {
                 console.log(error);
             }
         }
-
+        
+        navigate("/");
     }
     return (
         <div className='login'>

@@ -63,7 +63,7 @@ const Profile = () => {
                     <div className='profileRightTop'>
                         <div className='profileCover'>
                             <img className='profileCoverImg' alt='' src={user.CoverPicture ? PF + user.CoverPicture : PF + "person/blankCover.jpg"}></img>
-                            <img className='profileUserImg' alt='' src={user.ProfilePicture ? PF + "person/" + user.ProfilePicture : PF + "person/BlankProfilePicture.jpg"}></img>
+                            <img crossorigin="anonymous" className='profileUserImg' alt='' src={user.ProfilePicture ? PF + "person/" + user.ProfilePicture : PF + "person/BlankProfilePicture.jpg"}></img>
                             {user._id === currentuser._id &&
                                 <label htmlFor='updateProfile' >
                                     <Add className='uploadProfileImg' />

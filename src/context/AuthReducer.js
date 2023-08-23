@@ -29,7 +29,6 @@ export const AuthReducer = (state, action) => {
 
             }
         case "Unfollow":
-            // console.log("unfollow");
             return {
                 ...state,
                 user: {
